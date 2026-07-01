@@ -1104,13 +1104,14 @@ body {
   min-height: 100vh;
 }
 
+/* Contact Page Envelope Image */
 .envelope-bg {
   position: absolute;
   top: 100px;
   right: 0;
   width: 500px;
   height: 400px;
-  opacity: 1.0;
+  opacity: 1.0; /* 100% visible, not dark */
   z-index: 0;
 }
 
