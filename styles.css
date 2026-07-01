@@ -1045,8 +1045,8 @@ body {
 /* Contact Page Envelope Background */
 .envelope-bg {
   position: absolute;
-  top: -50px;       /* Move it up to align with the very top heading */
-  right: 5%;        /* Move it slightly inward so it's not cut off on the right */
+  top: 100px;       /* Move it up to align with the very top heading */
+  right: 100%;        /* Move it slightly inward so it's not cut off on the right */
   width: 700px;     /* Slightly smaller width */
   height: 500px;    /* Reduce height so it doesn't go down behind the cards */
   opacity: 1.0;
