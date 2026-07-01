@@ -1001,30 +1001,35 @@ body {
   min-height: 100vh;
 }
 
-/* Contact Page Envelope Image */
+/* Contact Page Envelope Background */
 .envelope-bg {
   position: absolute;
-  top: 100px;
-  right: 0;
-  width: 500px;
-  height: 400px;
-  opacity: 1.0; /* 100% visible, not dark */
+  top: 50%;
+  right: -100px;
+  transform: translateY(-50%);
+  width: 800px;
+  height: 600px;
+  opacity: 0.6;
   z-index: 0;
+  pointer-events: none;
 }
 
 .envelope-bg img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  object-position: center;
   animation: envelopeGlow 4s ease-in-out infinite;
 }
 
 @keyframes envelopeGlow {
   0%, 100% { 
-    filter: drop-shadow(0 0 20px rgba(124, 58, 237, 0.5));
+    filter: drop-shadow(0 0 30px rgba(124, 58, 237, 0.6)) 
+            drop-shadow(0 0 60px rgba(124, 58, 237, 0.3));
   }
   50% { 
-    filter: drop-shadow(0 0 40px rgba(124, 58, 237, 0.8));
+    filter: drop-shadow(0 0 50px rgba(124, 58, 237, 0.8)) 
+            drop-shadow(0 0 100px rgba(124, 58, 237, 0.5));
   }
 }
 
