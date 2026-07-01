@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="ISMAT XR - XR Developer & VR Consultant building immersive experiences" />
-  <meta name="theme-color" content="#7c3aed" />
   <title>ISMAT XR | XR Developer & VR Consultant</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -12,16 +11,20 @@
   <!-- Navigation -->
   <nav class="navbar">
     <div class="nav-container">
-      <div class="logo">
-        <span>ISMAT</span><span>XR</span>
+      <div class="logo-wrapper">
+        <div class="logo">
+          <span>ISMAT</span><span>XR</span>
+        </div>
+        <div class="logo-subtitle">XR Developer • VR Consultant • Founder of Exovers</div>
       </div>
-      <div class="nav-label">XR Developer • VR Consultant • Founder of Exovers</div>
+      
       <div class="nav-links">
         <span class="nav-link active" onclick="showPage('home')">About Me</span>
         <span class="nav-link" onclick="showPage('projects')">Projects</span>
         <span class="nav-link" onclick="showPage('speaking')">Speaking & Insights</span>
         <span class="nav-link" onclick="showPage('contact')">Contact</span>
       </div>
+      
       <button class="cta-btn" onclick="showPage('contact')">Get in Touch</button>
     </div>
   </nav>
@@ -29,12 +32,12 @@
   <!-- Home Page -->
   <section id="home" class="page active">
     <!-- Hero Section -->
-    <div class="hero hero-bg">
-      <div class="grid-pattern" style="position: absolute; inset: 0; opacity: 0.5;"></div>
-      <div class="city-bg"></div>
+    <div class="hero">
+      <div class="hero-bg-image"></div>
+      <div class="grid-pattern"></div>
       
-      <div class="hero-content" style="position: relative; z-index: 1;">
-        <p>XR Developer • VR Consultant • Founder of Exovers</p>
+      <div class="hero-content">
+        <p class="hero-label">XR Developer • VR Consultant • Founder of Exovers</p>
         <h1>
           Building Immersive <br />
           <span class="gradient-text">VR Experiences</span>
@@ -61,34 +64,16 @@
         </div>
       </div>
       
-      <div class="hero-img" style="position: relative; z-index: 1;">
-        <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
-          <div class="animate-pulse-glow" style="width: 320px; height: 320px; border-radius: 50%; border: 2px solid rgba(124, 58, 237, 0.2);"></div>
-        </div>
-        <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
-          <div style="width: 384px; height: 384px; border-radius: 50%; border: 1px solid rgba(124, 58, 237, 0.1);"></div>
-        </div>
-        <img src="assets/vr-person.jpg" alt="VR Experience" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-        <div style="display: none; width: 100%; max-width: 500px; height: 450px; background: linear-gradient(135deg, rgba(124, 58, 237, 0.2), rgba(59, 130, 246, 0.1)); border-radius: 16px; align-items: center; justify-content: center; flex-direction: column; gap: 1rem;">
-          <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #7c3aed, #3b82f6); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
-              <rect x="2" y="7" width="20" height="10" rx="3"></rect>
-              <circle cx="8" cy="12" r="2"></circle>
-              <circle cx="16" cy="12" r="2"></circle>
-              <path d="M12 17v3"></path>
-            </svg>
-          </div>
-          <p style="color: var(--text-secondary); font-size: 0.9rem;">VR Experience</p>
-        </div>
+      <div class="hero-img-wrapper">
+        <div class="hero-glow-ring"></div>
+        <img src="assets/vr-headset-experience.png" alt="VR Experience" class="hero-image" />
       </div>
     </div>
 
     <!-- About Section -->
     <div class="about">
       <div class="about-inner">
-        <div class="about-photo">
-          👨‍💻
-        </div>
+        <img src="assets/ismat-headshot.png" alt="Ismat" class="about-photo" onerror="this.style.display='none'" />
         <div class="about-text">
           <h3>Hi, I'm <span>Ismat</span></h3>
           <p>
@@ -110,7 +95,7 @@
             <div class="stat-box">
               <div class="icon">🌍</div>
               <h4>15+</h4>
-              <p>Clients in Countries & Beyond</p>
+              <p>Clients Worldwide</p>
             </div>
             <div class="stat-box">
               <div class="icon">🥽</div>
@@ -132,9 +117,7 @@
       <div class="projects-preview-grid">
         <div class="project-preview-card" onclick="showPage('projects')">
           <div class="image-wrapper">
-            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
-              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-            </svg>
+            <img src="assets/amazon-tour.png" alt="Amazon VR Tour" class="card-image" />
           </div>
           <div class="content">
             <h3>Amazon VR Tour</h3>
@@ -146,9 +129,7 @@
         
         <div class="project-preview-card" onclick="showPage('projects')">
           <div class="image-wrapper">
-            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
-              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-            </svg>
+            <img src="assets/denza-showroom.png" alt="Denza Showroom" class="card-image" />
           </div>
           <div class="content">
             <h3>Denza Showroom Experience</h3>
@@ -160,9 +141,7 @@
         
         <div class="project-preview-card" onclick="showPage('projects')">
           <div class="image-wrapper">
-            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
-              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-            </svg>
+            <img src="assets/virtual-gallery.png" alt="Virtual Gallery" class="card-image" />
           </div>
           <div class="content">
             <h3>Balai Seni Negara Virtual Gallery</h3>
@@ -180,31 +159,19 @@
       <div class="speaking-preview-grid">
         <div class="speaking-card-sm" onclick="showPage('speaking')">
           <div class="image-wrapper">
-            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
-              <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
-              <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
-              <line x1="12" y1="19" x2="12" y2="22"></line>
-            </svg>
+            <img src="assets/speaking-stage-1.png" alt="Speaking" class="card-image" />
           </div>
           <p>APU Talk</p>
         </div>
         <div class="speaking-card-sm" onclick="showPage('speaking')">
           <div class="image-wrapper">
-            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
-              <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
-              <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
-              <line x1="12" y1="19" x2="12" y2="22"></line>
-            </svg>
+            <img src="assets/immersive-learning-talk.png" alt="UMR" class="card-image" />
           </div>
           <p>UMR Sharing Session</p>
         </div>
         <div class="speaking-card-sm" onclick="showPage('speaking')">
           <div class="image-wrapper">
-            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
-              <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
-              <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
-              <line x1="12" y1="19" x2="12" y2="22"></line>
-            </svg>
+            <img src="assets/segi-university-panel.png" alt="SGU" class="card-image" />
           </div>
           <p>SGU Industry Forum</p>
         </div>
@@ -240,9 +207,9 @@
 
   <!-- Projects Page -->
   <section id="projects" class="page">
-    <div class="page-top hero-bg">
-      <div class="grid-pattern" style="position: absolute; inset: 0; opacity: 0.5;"></div>
-      <div class="city-bg" style="height: 400px;"></div>
+    <div class="page-top">
+      <div class="page-bg-image"></div>
+      <div class="grid-pattern"></div>
       
       <p>XR Developer • VR Consultant • Founder of Exovers</p>
       <h1>My <span class="gradient-text-purple">Projects</span></h1>
@@ -264,9 +231,7 @@
       <div class="project-card" data-category="virtual-tours">
         <span class="card-num">01</span>
         <div class="image-wrapper">
-          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
-            <polygon points="5 3 19 12 5 21 5 3"></polygon>
-          </svg>
+          <img src="assets/amazon-tour.png" alt="Amazon VR Tour" class="card-image" />
         </div>
         <h3>Amazon VR Tour</h3>
         <p class="category">VR/AR Experience</p>
@@ -280,9 +245,7 @@
       <div class="project-card" data-category="product">
         <span class="card-num">02</span>
         <div class="image-wrapper">
-          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
-            <polygon points="5 3 19 12 5 21 5 3"></polygon>
-          </svg>
+          <img src="assets/denza-showroom.png" alt="Denza" class="card-image" />
         </div>
         <h3>Denza Showroom Experience</h3>
         <p class="category">Interactive product visualization</p>
@@ -296,9 +259,7 @@
       <div class="project-card" data-category="virtual-tours">
         <span class="card-num">03</span>
         <div class="image-wrapper">
-          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
-            <polygon points="5 3 19 12 5 21 5 3"></polygon>
-          </svg>
+          <img src="assets/virtual-gallery.png" alt="Gallery" class="card-image" />
         </div>
         <h3>Balai Seni Negara Virtual Gallery</h3>
         <p class="category">Cultural heritage experience</p>
@@ -312,9 +273,7 @@
       <div class="project-card" data-category="training">
         <span class="card-num">04</span>
         <div class="image-wrapper">
-          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
-            <polygon points="5 3 19 12 5 21 5 3"></polygon>
-          </svg>
+          <img src="assets/firefighter-training.png" alt="Firefighter" class="card-image" />
         </div>
         <h3>VR Firefighter Training</h3>
         <p class="category">Training simulation</p>
@@ -328,9 +287,7 @@
       <div class="project-card" data-category="education">
         <span class="card-num">05</span>
         <div class="image-wrapper">
-          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
-            <polygon points="5 3 19 12 5 21 5 3"></polygon>
-          </svg>
+          <img src="assets/xr-education.png" alt="Education" class="card-image" />
         </div>
         <h3>VR Education / UPSI</h3>
         <p class="category">Educational experience</p>
@@ -358,8 +315,9 @@
 
   <!-- Speaking Page -->
   <section id="speaking" class="page">
-    <div class="page-top hero-bg">
-      <div class="grid-pattern" style="position: absolute; inset: 0; opacity: 0.5;"></div>
+    <div class="page-top">
+      <div class="page-bg-image"></div>
+      <div class="grid-pattern"></div>
       
       <p>XR Developer • VR Consultant • Founder of Exovers</p>
       <h1>Speaking & Insights</h1>
@@ -392,9 +350,7 @@
         <div class="speaking-card" data-type="sharing">
           <span class="card-label">Sharing</span>
           <div class="image-wrapper">
-            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
-              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-            </svg>
+            <img src="assets/speaking-conference.png" alt="APU" class="card-image" />
           </div>
           <p class="card-date">2024</p>
           <h3>APU Talk – XR in Education & Industry</h3>
@@ -405,9 +361,7 @@
         <div class="speaking-card" data-type="sharing">
           <span class="card-label">Sharing</span>
           <div class="image-wrapper">
-            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
-              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-            </svg>
+            <img src="assets/immersive-learning.png" alt="UMR" class="card-image" />
           </div>
           <p class="card-date">2024</p>
           <h3>UMR Sharing Session – Immersive Learning with VR</h3>
@@ -418,9 +372,7 @@
         <div class="speaking-card" data-type="pyp">
           <span class="card-label">PYP Evaluator</span>
           <div class="image-wrapper">
-            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
-              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-            </svg>
+            <img src="assets/final-year-presentation.png" alt="Evaluation" class="card-image" />
           </div>
           <p class="card-date">2024</p>
           <h3>University Project Evaluation</h3>
@@ -431,9 +383,7 @@
         <div class="speaking-card" data-type="advisory">
           <span class="card-label">Advisory Panel</span>
           <div class="image-wrapper">
-            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
-              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-            </svg>
+            <img src="assets/segi-university-panel.png" alt="SGU" class="card-image" />
           </div>
           <p class="card-date">2024</p>
           <h3>SGU University – Industry Advisory Panel</h3>
@@ -444,9 +394,7 @@
         <div class="speaking-card" data-type="classes">
           <span class="card-label">Classes</span>
           <div class="image-wrapper">
-            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
-              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-            </svg>
+            <img src="assets/vr-workshop.png" alt="Workshop" class="card-image" />
           </div>
           <p class="card-date">2024</p>
           <h3>VR / XR Masterclass</h3>
@@ -457,9 +405,7 @@
         <div class="speaking-card" data-type="classes">
           <span class="card-label">Classes</span>
           <div class="image-wrapper">
-            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
-              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-            </svg>
+            <img src="assets/ups-building.png" alt="Intro" class="card-image" />
           </div>
           <p class="card-date">2024</p>
           <h3>Intro to Virtual Reality</h3>
@@ -525,29 +471,15 @@
 
   <!-- Contact Page -->
   <section id="contact" class="page">
-    <div class="grid-pattern" style="position: absolute; inset: 0; opacity: 0.5;"></div>
+    <div class="grid-pattern"></div>
     
-    <div style="position: absolute; top: 100px; right: 0; width: 600px; height: 400px; opacity: 0.3;">
-      <svg viewBox="0 0 600 400" class="envelope-glow" style="width: 100%; height: 100%;">
-        <defs>
-          <linearGradient id="envGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#7c3aed" />
-            <stop offset="50%" stop-color="#a78bfa" />
-            <stop offset="100%" stop-color="#3b82f6" />
-          </linearGradient>
-        </defs>
-        <rect x="100" y="80" width="400" height="260" rx="12" fill="none" stroke="url(#envGrad)" stroke-width="2" />
-        <path d="M100 80 L300 220 L500 80" fill="none" stroke="url(#envGrad)" stroke-width="2" />
-        <path d="M100 340 L250 200" fill="none" stroke="url(#envGrad)" stroke-width="1.5" opacity="0.5" />
-        <path d="M500 340 L350 200" fill="none" stroke="url(#envGrad)" stroke-width="1.5" opacity="0.5" />
-        <circle cx="300" cy="220" r="4" fill="#a78bfa" />
-        <circle cx="300" cy="220" r="8" fill="#a78bfa" opacity="0.3" />
-      </svg>
+    <div class="envelope-container">
+      <img src="assets/neon-email.png" alt="Envelope" class="envelope-image" />
     </div>
 
-    <div class="city-bg" style="height: 200px;"></div>
+    <div class="city-bg-bottom"></div>
 
-    <div class="contact-header" style="position: relative; z-index: 1;">
+    <div class="contact-header">
       <p>XR Developer • VR Consultant • Founder of Exovers</p>
       <h1>
         Let's Build Something<br />
@@ -570,7 +502,7 @@
       </div>
     </div>
 
-    <div class="contact-layout" style="position: relative; z-index: 1;">
+    <div class="contact-layout">
       <div class="contact-form-box">
         <h3>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -651,7 +583,7 @@
       </div>
     </div>
 
-    <div class="cta-box" style="margin-top: 3rem; position: relative; z-index: 1;">
+    <div class="cta-box">
       <h3>Have an XR Project in Mind?</h3>
       <p>Let's discuss how we can bring your ideas to life with immersive technology.</p>
       <button class="btn-primary" onclick="showPage('contact')">
