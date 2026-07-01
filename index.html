@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISMAT XR - Building Immersive VR Experiences</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">ISMAT XR</div>
+            <span class="nav-label">XR Developer • Founder of Exverses</span>
+            <div class="nav-links">
+                <a href="#" data-page="home" class="nav-link">Home</a>
+                <a href="#" data-page="projects" class="nav-link">Projects</a>
+                <a href="#" data-page="speaking" class="nav-link">Speaking & Insights</a>
+                <a href="#" data-page="contact" class="nav-link">Contact</a>
+            </div>
+            <button class="cta-btn" data-page="contact">Get in Touch</button>
+        </div>
+    </nav>
+
+    <!-- HOME PAGE -->
+    <section id="home" class="page active">
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Building Immersive<br>VR Experiences</h1>
+                <p>For Training, Education & Interactive Events</p>
+                <p class="hero-desc">I help companies, universities, and event organizers create immersive VR/AR experiences — from training simulations to cultural preservation through digital twins, virtual tours and interactive brand activations.</p>
+                <div class="hero-btns">
+                    <button class="btn-cyan" data-page="projects">View My Work</button>
+                    <button class="btn-outline">Book a Call</button>
+                    <button class="btn-outline">Let's Chat</button>
+                </div>
+            </div>
+            <div class="hero-img">
+                <img src="assets/neon-city.png" alt="VR">
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="about">
+            <div class="about-inner">
+                <div class="about-photo">
+                    <img src="assets/ismat-headshot.png" alt="Ismat">
+                </div>
+                <div class="about-text">
+                    <h3>Hi, I'm <span class="cyan">Ismat</span></h3>
+                    <p>Founder of Exverses, where I build VR training simulations, immersive education experiences, and interactive VR solutions for clients across Malaysia and international markets.</p>
+                    <a href="#" class="link-arrow">View More →</a>
+                    <div class="stats-about">
+                        <div class="stat-box">
+                            <span class="icon">👨‍💼</span>
+                            <h4>Developer</h4>
+                            <p>8+ Years</p>
+                        </div>
+                        <div class="stat-box">
+                            <span class="icon">⭐</span>
+                            <h4>30+</h4>
+                            <p>Projects</p>
+                        </div>
+                        <div class="stat-box">
+                            <span class="icon">🌍</span>
+                            <h4>50+</h4>
+                            <p>Clients</p>
+                        </div>
+                        <div class="stat-box">
+                            <span class="icon">🎯</span>
+                            <h4>XR Consultant</h4>
+                            <p>Experience Design</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selected Projects -->
+        <section class="projects-section">
+            <div class="section-header">
+                <h2>Selected Projects <span class="gray">• View My Recent Work</span></h2>
+                <a href="#" data-page="projects" class="view-all">View All Projects →</a>
+            </div>
+            <div class="projects-preview-grid">
+                <img src="assets/amazon-warehouse.png" alt="Amazon">
+                <img src="assets/denza-showroom.png" alt="Denza">
+                <img src="assets/virtual-gallery.png" alt="Gallery">
+            </div>
+        </section>
+
+        <!-- Speaking -->
+        <section class="speaking-section">
+            <h2>Speaking & <span class="cyan">Insights</span></h2>
+            <div class="speaking-preview-grid">
+                <div class="speaking-card-sm">
+                    <img src="assets/immersive-learning-talk.png" alt="Speaking">
+                    <p>Immersive Learning Session</p>
+                </div>
+                <div class="speaking-card-sm">
+                    <img src="assets/final-year-presentation.png" alt="Speaking">
+                    <p>Student Project Showcase</p>
+                </div>
+                <div class="speaking-card-sm">
+                    <img src="assets/segi-university-panel.png" alt="Speaking">
+                    <p>University Panel Discussion</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-final">
+            <h2>Let's Build Something <span class="cyan">Immersive</span> Together</h2>
+            <button class="btn-cyan" data-page="contact">Start a Project →</button>
+        </section>
+    </section>
+
+    <!-- PROJECTS PAGE -->
+    <section id="projects" class="page">
+        <div class="page-top">
+            <h1>My <span class="cyan">Projects</span></h1>
+            <p>Build immersive VR/XR experiences that solve real problems — from training simulations and education to virtual tours and interactive brand activations.</p>
+        </div>
+
+        <div class="filters-bar">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="training">Training & Simulation</button>
+            <button class="filter-btn" data-filter="education">Education</button>
+            <button class="filter-btn" data-filter="virtual">Virtual Tours</button>
+            <button class="filter-btn" data-filter="experience">Product Experience</button>
+            <button class="filter-btn" data-filter="events">Events & Education</button>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card" data-category="training">
+                <div class="card-num">01</div>
+                <img src="assets/amazon-warehouse.png" alt="Amazon VR Tour">
+                <h3>Amazon VR Tour</h3>
+                <p>Immersive onboarding experience for warehouse training</p>
+                <a href="#">View Case Study →</a>
+            </div>
+
+            <div class="project-card" data-category="experience">
+                <div class="card-num">02</div>
+                <img src="assets/denza-showroom.png" alt="Denza">
+                <h3>Denza Showroom Experience</h3>
+                <p>Interactive product visualization for EV customers</p>
+                <a href="#">View Case Study →</a>
+            </div>
+
+            <div class="project-card" data-category="virtual">
+                <div class="card-num">03</div>
+                <img src="assets/virtual-gallery.png" alt="Gallery">
+                <h3>Balai Seni Negara Virtual Gallery</h3>
+                <p>Cultural heritage preservation through digital experience</p>
+                <a href="#">View Case Study →</a>
+            </div>
+
+            <div class="project-card" data-category="training">
+                <div class="card-num">04</div>
+                <img src="assets/firefighter-training.png" alt="Training">
+                <h3>VR Firefighter Training</h3>
+                <p>Advanced tactical simulation with real-world scenarios</p>
+                <a href="#">View Case Study →</a>
+            </div>
+
+            <div class="project-card" data-category="education">
+                <div class="card-num">05</div>
+                <img src="assets/upsi-building.png" alt="UPSI">
+                <h3>VR Education / UPSI</h3>
+                <p>Interactive virtual campus and educational experience</p>
+                <a href="#">View Case Study →</a>
+            </div>
+
+            <div class="cta-card-project">
+                <div class="cta-icon">✨</div>
+                <h3>Open to New Collaborations</h3>
+                <p>I'm always excited to work on innovative XR projects that create impact.</p>
+                <button class="btn-cyan" data-page="contact">Start a Project →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPEAKING PAGE -->
+    <section id="speaking" class="page">
+        <div class="page-top">
+            <h2>Sharing Knowledge.<br><span class="cyan">Building Future Talent.</span></h2>
+            <div class="speaking-top-stats">
+                <div class="stat-speaking">
+                    <h4>20+</h4>
+                    <p>Speaking Engagements</p>
+                </div>
+                <div class="stat-speaking">
+                    <p><strong>Universities,<br>Panels & Conferences</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="filters-bar">
+            <button class="filter-btn active" data-filter="all">Sharing</button>
+            <button class="filter-btn" data-filter="fyi">FYI Evaluator</button>
+            <button class="filter-btn" data-filter="advisory">Industrial Advisory Panel</button>
+            <button class="filter-btn" data-filter="classes">Classes</button>
+        </div>
+
+        <div class="speaking-layout">
+            <div class="speaking-grid-main">
+                <div class="speaking-card" data-category="all">
+                    <img src="assets/immersive-learning-talk.png" alt="Speaking">
+                    <div class="card-label">KEYNOTE</div>
+                    <p class="card-date">JAN 2024, UX SHARING</p>
+                    <h3>Immersive Learning with VR</h3>
+                    <p>Cognitive benefits of immersive environments</p>
+                    <a href="#">Watch Session →</a>
+                </div>
+
+                <div class="speaking-card" data-category="all">
+                    <img src="assets/final-year-presentation.png" alt="Speaking">
+                    <div class="card-label">WORKSHOP</div>
+                    <p class="card-date">MAR 2024, STUDENT SHOWCASE</p>
+                    <h3>Final Year Project Presentation</h3>
+                    <p>Students presenting innovative XR solutions</p>
+                    <a href="#">View Recording →</a>
+                </div>
+
+                <div class="speaking-card" data-category="all">
+                    <img src="assets/segi-university-panel.png" alt="Speaking">
+                    <div class="card-label">PANEL</div>
+                    <p class="card-date">FEB 2024, SEGi UNIVERSITY</p>
+                    <h3>University Panel Discussion</h3>
+                    <p>Industry leaders discussing future of XR</p>
+                    <a href="#">Read Summary →</a>
+                </div>
+
+                <div class="speaking-card" data-category="all">
+                    <img src="assets/vr-workshop.png" alt="Speaking">
+                    <div class="card-label">WORKSHOP</div>
+                    <p class="card-date">APR 2024, DEV TRAINING</p>
+                    <h3>VR Development Workshop</h3>
+                    <p>Hands-on training for emerging developers</p>
+                    <a href="#">Learn More →</a>
+                </div>
+
+                <div class="speaking-card" data-category="all">
+                    <img src="assets/speaking-stage-1.png" alt="Speaking">
+                    <div class="card-label">KEYNOTE</div>
+                    <p class="card-date">MAY 2024, XR SUMMIT</p>
+                    <h3>XR Innovation Conference</h3>
+                    <p>Latest trends and innovations in XR</p>
+                    <a href="#">Watch Keynote →</a>
+                </div>
+
+                <div class="speaking-card" data-category="all">
+                    <img src="assets/speaking-conference.png" alt="Speaking">
+                    <div class="card-label">CONFERENCE</div>
+                    <p class="card-date">JUNE 2024, TECH SUMMIT</p>
+                    <h3>Industry Thought Leadership</h3>
+                    <p>Sharing insights on immersive technology</p>
+                    <a href="#">Listen Now →</a>
+                </div>
+            </div>
+
+            <div class="contribution-box">
+                <h3>About My <span class="cyan">Contribution</span></h3>
+                <div class="contribution-items">
+                    <div class="contribution-item">
+                        <span class="bullet">🎤</span>
+                        <div>
+                            <h4>Speaking at Global Events</h4>
+                            <p>Sharing insights on XR innovation at international tech summits.</p>
+                        </div>
+                    </div>
+                    <div class="contribution-item">
+                        <span class="bullet">📊</span>
+                        <div>
+                            <h4>FYI Evaluator</h4>
+                            <p>Evaluating emerging XR technologies and providing strategic perspectives.</p>
+                        </div>
+                    </div>
+                    <div class="contribution-item">
+                        <span class="bullet">🏢</span>
+                        <div>
+                            <h4>Industrial Advisory Panel</h4>
+                            <p>Contributing to industry standards in immersive technology.</p>
+                        </div>
+                    </div>
+                    <div class="contribution-item">
+                        <span class="bullet">📚</span>
+                        <div>
+                            <h4>Educational Classes</h4>
+                            <p>Teaching next-generation developers about VR/XR development.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="cta-speaking">
+            <h2>Let's Collaborate Through<br><span class="cyan">Knowledge & Innovation</span></h2>
+            <button class="btn-cyan" data-page="contact">Get in Touch →</button>
+        </section>
+    </section>
+
+    <!-- CONTACT PAGE -->
+    <section id="contact" class="page">
+        <h1>Let's Build Something<br><span class="cyan">Immersive</span> Together</h1>
+        <p class="contact-intro">I'm open to high-impact collaborations, technical consulting, and speaking invitations at international tech summits. Let's explore what we can create together.</p>
+
+        <div class="contact-layout">
+            <div class="contact-form-box">
+                <h3>Send Me a Message</h3>
+                <p>Fill out the form below and I'll get back to you as soon as possible.</p>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-row">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <select id="subject" required>
+                        <option value="">Subject</option>
+                        <option value="collaboration">Collaboration</option>
+                        <option value="consulting">Consulting</option>
+                        <option value="speaking">Speaking</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <textarea id="message" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn-cyan">Send Message →</button>
+                    <p id="formStatus" class="form-status"></p>
+                </form>
+            </div>
+
+            <div class="contact-info-box">
+                <h3>Other Ways to Connect</h3>
+                <div class="contact-ways">
+                    <div class="contact-way">
+                        <span class="icon">✉️</span>
+                        <div>
+                            <h4>Email</h4>
+                            <p>hello@ismatxr.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-way">
+                        <span class="icon">🔗</span>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <p><a href="https://linkedin.com/in/ismatxr" target="_blank">linkedin.com/in/ismatxr</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-way">
+                        <span class="icon">📸</span>
+                        <div>
+                            <h4>Instagram</h4>
+                            <p>@ismatxr</p>
+                        </div>
+                    </div>
+                    <div class="contact-way">
+                        <span class="icon">📍</span>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Malaysia & International</p>
+                        </div>
+                    </div>
+                    <div class="contact-way">
+                        <span class="icon">⏱️</span>
+                        <div>
+                            <h4>Response Time</h4>
+                            <p>Within 24-48 hours</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-box">
+                    <h3>Have an XR Project in Mind?</h3>
+                    <p>Let's explore how immersive technology can transform your ideas into reality.</p>
+                    <button class="btn-cyan">Start a Project →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-left">
+            <h3>ISMAT XR</h3>
+            <p>© 2024 ISMAT XR. All rights reserved.</p>
+        </div>
+        <div class="footer-right">
+            <a href="#">LinkedIn</a>
+            <a href="#">Twitter</a>
+            <a href="#">Discord</a>
+            <a href="#">GitHub</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
