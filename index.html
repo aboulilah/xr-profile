@@ -1,397 +1,686 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ISMAT XR - Building Immersive VR Experiences</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ISMAT XR - XR Developer & VR Consultant building immersive experiences" />
+  <meta name="theme-color" content="#7c3aed" />
+  <title>ISMAT XR | XR Developer & VR Consultant</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">ISMAT XR</div>
-            <span class="nav-label">XR Developer • Founder of Exverses</span>
-            <div class="nav-links">
-                <a href="#" data-page="home" class="nav-link">Home</a>
-                <a href="#" data-page="projects" class="nav-link">Projects</a>
-                <a href="#" data-page="speaking" class="nav-link">Speaking & Insights</a>
-                <a href="#" data-page="contact" class="nav-link">Contact</a>
-            </div>
-            <button class="cta-btn" data-page="contact">Get in Touch</button>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <span>ISMAT</span><span>XR</span>
+      </div>
+      <div class="nav-label">XR Developer • VR Consultant • Founder of Exovers</div>
+      <div class="nav-links">
+        <span class="nav-link active" onclick="showPage('home')">About Me</span>
+        <span class="nav-link" onclick="showPage('projects')">Projects</span>
+        <span class="nav-link" onclick="showPage('speaking')">Speaking & Insights</span>
+        <span class="nav-link" onclick="showPage('contact')">Contact</span>
+      </div>
+      <button class="cta-btn" onclick="showPage('contact')">Get in Touch</button>
+    </div>
+  </nav>
+
+  <!-- Home Page -->
+  <section id="home" class="page active">
+    <!-- Hero Section -->
+    <div class="hero hero-bg">
+      <div class="grid-pattern" style="position: absolute; inset: 0; opacity: 0.5;"></div>
+      <div class="city-bg"></div>
+      
+      <div class="hero-content" style="position: relative; z-index: 1;">
+        <p>XR Developer • VR Consultant • Founder of Exovers</p>
+        <h1>
+          Building Immersive <br />
+          <span class="gradient-text">VR Experiences</span>
+        </h1>
+        <p class="hero-desc">
+          I help companies, universities, and event organizers create immersive VR/AR experiences — from training simulations to virtual tours and interactive brand activations.
+        </p>
+        <div class="hero-btns">
+          <button class="btn-primary" onclick="showPage('projects')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            View My Work
+          </button>
+          <button class="btn-outline" onclick="showPage('contact')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            Book a Call
+          </button>
         </div>
-    </nav>
+      </div>
+      
+      <div class="hero-img" style="position: relative; z-index: 1;">
+        <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
+          <div class="animate-pulse-glow" style="width: 320px; height: 320px; border-radius: 50%; border: 2px solid rgba(124, 58, 237, 0.2);"></div>
+        </div>
+        <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
+          <div style="width: 384px; height: 384px; border-radius: 50%; border: 1px solid rgba(124, 58, 237, 0.1);"></div>
+        </div>
+        <img src="assets/vr-person.jpg" alt="VR Experience" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div style="display: none; width: 100%; max-width: 500px; height: 450px; background: linear-gradient(135deg, rgba(124, 58, 237, 0.2), rgba(59, 130, 246, 0.1)); border-radius: 16px; align-items: center; justify-content: center; flex-direction: column; gap: 1rem;">
+          <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #7c3aed, #3b82f6); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+              <rect x="2" y="7" width="20" height="10" rx="3"></rect>
+              <circle cx="8" cy="12" r="2"></circle>
+              <circle cx="16" cy="12" r="2"></circle>
+              <path d="M12 17v3"></path>
+            </svg>
+          </div>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">VR Experience</p>
+        </div>
+      </div>
+    </div>
 
-    <!-- HOME PAGE -->
-    <section id="home" class="page active">
-        <!-- Hero -->
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Building Immersive<br>VR Experiences</h1>
-                <p>For Training, Education & Interactive Events</p>
-                <p class="hero-desc">I help companies, universities, and event organizers create immersive VR/AR experiences — from training simulations to cultural preservation through digital twins, virtual tours and interactive brand activations.</p>
-                <div class="hero-btns">
-                    <button class="btn-cyan" data-page="projects">View My Work</button>
-                    <button class="btn-outline">Book a Call</button>
-                    <button class="btn-outline">Let's Chat</button>
-                </div>
+    <!-- About Section -->
+    <div class="about">
+      <div class="about-inner">
+        <div class="about-photo">
+          👨‍💻
+        </div>
+        <div class="about-text">
+          <h3>Hi, I'm <span>Ismat</span></h3>
+          <p>
+            XR & immersive expert. I build VR training simulations, interactive education experiences, and immersive XR solutions for clients across industries and international markets.
+          </p>
+          <a href="#" class="link-arrow" onclick="showPage('contact'); return false;">Let's Talk →</a>
+          
+          <div class="stats-about">
+            <div class="stat-box">
+              <div class="icon">🎮</div>
+              <h4>6+ Years</h4>
+              <p>VR Developer</p>
             </div>
-            <div class="hero-img">
-                <img src="assets/neon-city.png" alt="VR">
+            <div class="stat-box">
+              <div class="icon">📁</div>
+              <h4>100+</h4>
+              <p>Projects</p>
             </div>
-        </section>
+            <div class="stat-box">
+              <div class="icon">🌍</div>
+              <h4>15+</h4>
+              <p>Clients in Countries & Beyond</p>
+            </div>
+            <div class="stat-box">
+              <div class="icon">🥽</div>
+              <h4>XR Consultant</h4>
+              <p>Experience Designer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        <!-- About -->
-        <section class="about">
-            <div class="about-inner">
-                <div class="about-photo">
-                    <img src="assets/ismat-headshot.png" alt="Ismat">
-                </div>
-                <div class="about-text">
-                    <h3>Hi, I'm <span class="cyan">Ismat</span></h3>
-                    <p>Founder of Exverses, where I build VR training simulations, immersive education experiences, and interactive VR solutions for clients across Malaysia and international markets.</p>
-                    <a href="#" class="link-arrow">View More →</a>
-                    <div class="stats-about">
-                        <div class="stat-box">
-                            <span class="icon">👨‍💼</span>
-                            <h4>Developer</h4>
-                            <p>8+ Years</p>
-                        </div>
-                        <div class="stat-box">
-                            <span class="icon">⭐</span>
-                            <h4>30+</h4>
-                            <p>Projects</p>
-                        </div>
-                        <div class="stat-box">
-                            <span class="icon">🌍</span>
-                            <h4>50+</h4>
-                            <p>Clients</p>
-                        </div>
-                        <div class="stat-box">
-                            <span class="icon">🎯</span>
-                            <h4>XR Consultant</h4>
-                            <p>Experience Design</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- Projects Section -->
+    <div class="projects-section">
+      <div class="section-header">
+        <h2>Selected Projects <span>Explore My Recent Work</span></h2>
+        <a href="#" class="view-all" onclick="showPage('projects'); return false;">View All Projects →</a>
+      </div>
+      
+      <div class="projects-preview-grid">
+        <div class="project-preview-card" onclick="showPage('projects')">
+          <div class="image-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+          </div>
+          <div class="content">
+            <h3>Amazon VR Tour</h3>
+            <p class="category">VR/AR Experience</p>
+            <p>A fully immersive VR experience that lets users explore a vast warehouse environment.</p>
+            <span class="tag">Virtual Tour</span>
+          </div>
+        </div>
+        
+        <div class="project-preview-card" onclick="showPage('projects')">
+          <div class="image-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+          </div>
+          <div class="content">
+            <h3>Denza Showroom Experience</h3>
+            <p class="category">Interactive product visualization</p>
+            <p>An immersive VR showroom that allows users to explore and customize the DENZA vehicle lineup.</p>
+            <span class="tag">Product Experience</span>
+          </div>
+        </div>
+        
+        <div class="project-preview-card" onclick="showPage('projects')">
+          <div class="image-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+          </div>
+          <div class="content">
+            <h3>Balai Seni Negara Virtual Gallery</h3>
+            <p class="category">Cultural heritage experience</p>
+            <p>A virtual gallery showcasing Malaysia's rich cultural heritage in an immersive environment.</p>
+            <span class="tag">Virtual Tour</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        <!-- Selected Projects -->
-        <section class="projects-section">
-            <div class="section-header">
-                <h2>Selected Projects <span class="gray">• View My Recent Work</span></h2>
-                <a href="#" data-page="projects" class="view-all">View All Projects →</a>
-            </div>
-            <div class="projects-preview-grid">
-                <img src="assets/amazon-warehouse.png" alt="Amazon">
-                <img src="assets/denza-showroom.png" alt="Denza">
-                <img src="assets/virtual-gallery.png" alt="Gallery">
-            </div>
-        </section>
+    <!-- Speaking Section -->
+    <div class="speaking-section">
+      <h2>Speaking & Insights</h2>
+      <div class="speaking-preview-grid">
+        <div class="speaking-card-sm" onclick="showPage('speaking')">
+          <div class="image-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+              <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+              <line x1="12" y1="19" x2="12" y2="22"></line>
+            </svg>
+          </div>
+          <p>APU Talk</p>
+        </div>
+        <div class="speaking-card-sm" onclick="showPage('speaking')">
+          <div class="image-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+              <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+              <line x1="12" y1="19" x2="12" y2="22"></line>
+            </svg>
+          </div>
+          <p>UMR Sharing Session</p>
+        </div>
+        <div class="speaking-card-sm" onclick="showPage('speaking')">
+          <div class="image-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+              <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+              <line x1="12" y1="19" x2="12" y2="22"></line>
+            </svg>
+          </div>
+          <p>SGU Industry Forum</p>
+        </div>
+      </div>
+    </div>
 
-        <!-- Speaking -->
-        <section class="speaking-section">
-            <h2>Speaking & <span class="cyan">Insights</span></h2>
-            <div class="speaking-preview-grid">
-                <div class="speaking-card-sm">
-                    <img src="assets/immersive-learning-talk.png" alt="Speaking">
-                    <p>Immersive Learning Session</p>
-                </div>
-                <div class="speaking-card-sm">
-                    <img src="assets/final-year-presentation.png" alt="Speaking">
-                    <p>Student Project Showcase</p>
-                </div>
-                <div class="speaking-card-sm">
-                    <img src="assets/segi-university-panel.png" alt="Speaking">
-                    <p>University Panel Discussion</p>
-                </div>
-            </div>
-        </section>
+    <!-- CTA Section -->
+    <div class="cta-final">
+      <div class="cta-banner">
+        <div class="cta-banner-content">
+          <div class="cta-banner-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+              <path d="M2 17l10 5 10-5"></path>
+              <path d="M2 12l10 5 10-5"></path>
+            </svg>
+          </div>
+          <div>
+            <h2>Let's Build Something <span class="gradient-text">Immersive</span> Together</h2>
+            <p>I'm available for projects, speaking engagements, and immersive XR solutions.</p>
+          </div>
+        </div>
+        <button class="btn-primary" onclick="showPage('contact')">
+          Start a Project
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
 
-        <!-- CTA -->
-        <section class="cta-final">
-            <h2>Let's Build Something <span class="cyan">Immersive</span> Together</h2>
-            <button class="btn-cyan" data-page="contact">Start a Project →</button>
-        </section>
-    </section>
+  <!-- Projects Page -->
+  <section id="projects" class="page">
+    <div class="page-top hero-bg">
+      <div class="grid-pattern" style="position: absolute; inset: 0; opacity: 0.5;"></div>
+      <div class="city-bg" style="height: 400px;"></div>
+      
+      <p>XR Developer • VR Consultant • Founder of Exovers</p>
+      <h1>My <span class="gradient-text-purple">Projects</span></h1>
+      <p>
+        I build immersive VR/XR experiences that solve real problems — from training simulations and education to virtual tours and interactive brand activations.
+      </p>
+    </div>
 
-    <!-- PROJECTS PAGE -->
-    <section id="projects" class="page">
-        <div class="page-top">
-            <h1>My <span class="cyan">Projects</span></h1>
-            <p>Build immersive VR/XR experiences that solve real problems — from training simulations and education to virtual tours and interactive brand activations.</p>
+    <div class="filters-bar">
+      <button class="filter-btn active" onclick="filterProjects('all', this)">All Projects</button>
+      <button class="filter-btn" onclick="filterProjects('training', this)">Training & Simulation</button>
+      <button class="filter-btn" onclick="filterProjects('education', this)">Education</button>
+      <button class="filter-btn" onclick="filterProjects('virtual-tours', this)">Virtual Tours</button>
+      <button class="filter-btn" onclick="filterProjects('product', this)">Product Experience</button>
+      <button class="filter-btn" onclick="filterProjects('events', this)">Events & Activation</button>
+    </div>
+
+    <div class="projects-grid" id="projectsGrid">
+      <div class="project-card" data-category="virtual-tours">
+        <span class="card-num">01</span>
+        <div class="image-wrapper">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+        </div>
+        <h3>Amazon VR Tour</h3>
+        <p class="category">VR/AR Experience</p>
+        <p>A fully immersive VR experience that lets users explore a vast warehouse environment.</p>
+        <div class="footer">
+          <span class="tag tag-purple">Virtual Tour</span>
+          <a href="#">View Details →</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="product">
+        <span class="card-num">02</span>
+        <div class="image-wrapper">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+        </div>
+        <h3>Denza Showroom Experience</h3>
+        <p class="category">Interactive product visualization</p>
+        <p>An immersive VR showroom that allows users to explore and customize the DENZA vehicle lineup.</p>
+        <div class="footer">
+          <span class="tag tag-blue">Product Experience</span>
+          <a href="#">View Details →</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="virtual-tours">
+        <span class="card-num">03</span>
+        <div class="image-wrapper">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+        </div>
+        <h3>Balai Seni Negara Virtual Gallery</h3>
+        <p class="category">Cultural heritage experience</p>
+        <p>A virtual gallery showcasing Malaysia's rich cultural heritage in an immersive environment.</p>
+        <div class="footer">
+          <span class="tag tag-purple">Virtual Tour</span>
+          <a href="#">View Details →</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="training">
+        <span class="card-num">04</span>
+        <div class="image-wrapper">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+        </div>
+        <h3>VR Firefighter Training</h3>
+        <p class="category">Training simulation</p>
+        <p>A realistic VR training simulation designed to prepare firefighters for real-life emergency scenarios.</p>
+        <div class="footer">
+          <span class="tag tag-cyan">Training & Simulation</span>
+          <a href="#">View Details →</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="education">
+        <span class="card-num">05</span>
+        <div class="image-wrapper">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+        </div>
+        <h3>VR Education / UPSI</h3>
+        <p class="category">Educational experience</p>
+        <p>An immersive VR learning experience developed for educational purposes and student engagement.</p>
+        <div class="footer">
+          <span class="tag tag-blue">Education</span>
+          <a href="#">View Details →</a>
+        </div>
+      </div>
+
+      <div class="cta-card-project">
+        <div class="cta-icon">📦</div>
+        <h3>Open to New <span class="gradient-text-purple">Collaborations</span></h3>
+        <p>I'm always excited to work on innovative XR projects that create impact.</p>
+        <button class="btn-primary" onclick="showPage('contact')">
+          Start a Project
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Speaking Page -->
+  <section id="speaking" class="page">
+    <div class="page-top hero-bg">
+      <div class="grid-pattern" style="position: absolute; inset: 0; opacity: 0.5;"></div>
+      
+      <p>XR Developer • VR Consultant • Founder of Exovers</p>
+      <h1>Speaking & Insights</h1>
+      <h2 class="gradient-text-purple" style="font-size: 2rem; margin-bottom: 1.5rem;">Sharing Knowledge. Building Future Talent.</h2>
+      <p>
+        I contribute to universities, students, and industry through sharing sessions, PYP evaluation, industrial advisory roles, and immersive technology classes.
+      </p>
+
+      <div class="speaking-top-stats">
+        <div class="stat-speaking">
+          <h4>20+</h4>
+          <p>Sessions & Engagements</p>
+        </div>
+        <div class="stat-speaking">
+          <h4>5+</h4>
+          <p>Universities</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="filters-bar">
+      <button class="filter-btn active" onclick="filterSpeaking('sharing', this)">Sharing</button>
+      <button class="filter-btn" onclick="filterSpeaking('pyp', this)">PYP Evaluator</button>
+      <button class="filter-btn" onclick="filterSpeaking('advisory', this)">Industrial Advisory Panel</button>
+      <button class="filter-btn" onclick="filterSpeaking('classes', this)">Classes</button>
+    </div>
+
+    <div class="speaking-layout">
+      <div class="speaking-grid-main" id="speakingGrid">
+        <div class="speaking-card" data-type="sharing">
+          <span class="card-label">Sharing</span>
+          <div class="image-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+          </div>
+          <p class="card-date">2024</p>
+          <h3>APU Talk – XR in Education & Industry</h3>
+          <p>Exploring the role of XR in modern education and industry applications.</p>
+          <a href="#">View Details →</a>
         </div>
 
-        <div class="filters-bar">
-            <button class="filter-btn active" data-filter="all">All Projects</button>
-            <button class="filter-btn" data-filter="training">Training & Simulation</button>
-            <button class="filter-btn" data-filter="education">Education</button>
-            <button class="filter-btn" data-filter="virtual">Virtual Tours</button>
-            <button class="filter-btn" data-filter="experience">Product Experience</button>
-            <button class="filter-btn" data-filter="events">Events & Education</button>
+        <div class="speaking-card" data-type="sharing">
+          <span class="card-label">Sharing</span>
+          <div class="image-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+          </div>
+          <p class="card-date">2024</p>
+          <h3>UMR Sharing Session – Immersive Learning with VR</h3>
+          <p>A deep dive into how VR is transforming the learning experience.</p>
+          <a href="#">View Details →</a>
         </div>
 
-        <div class="projects-grid">
-            <div class="project-card" data-category="training">
-                <div class="card-num">01</div>
-                <img src="assets/amazon-warehouse.png" alt="Amazon VR Tour">
-                <h3>Amazon VR Tour</h3>
-                <p>Immersive onboarding experience for warehouse training</p>
-                <a href="#">View Case Study →</a>
-            </div>
-
-            <div class="project-card" data-category="experience">
-                <div class="card-num">02</div>
-                <img src="assets/denza-showroom.png" alt="Denza">
-                <h3>Denza Showroom Experience</h3>
-                <p>Interactive product visualization for EV customers</p>
-                <a href="#">View Case Study →</a>
-            </div>
-
-            <div class="project-card" data-category="virtual">
-                <div class="card-num">03</div>
-                <img src="assets/virtual-gallery.png" alt="Gallery">
-                <h3>Balai Seni Negara Virtual Gallery</h3>
-                <p>Cultural heritage preservation through digital experience</p>
-                <a href="#">View Case Study →</a>
-            </div>
-
-            <div class="project-card" data-category="training">
-                <div class="card-num">04</div>
-                <img src="assets/firefighter-training.png" alt="Training">
-                <h3>VR Firefighter Training</h3>
-                <p>Advanced tactical simulation with real-world scenarios</p>
-                <a href="#">View Case Study →</a>
-            </div>
-
-            <div class="project-card" data-category="education">
-                <div class="card-num">05</div>
-                <img src="assets/upsi-building.png" alt="UPSI">
-                <h3>VR Education / UPSI</h3>
-                <p>Interactive virtual campus and educational experience</p>
-                <a href="#">View Case Study →</a>
-            </div>
-
-            <div class="cta-card-project">
-                <div class="cta-icon">✨</div>
-                <h3>Open to New Collaborations</h3>
-                <p>I'm always excited to work on innovative XR projects that create impact.</p>
-                <button class="btn-cyan" data-page="contact">Start a Project →</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- SPEAKING PAGE -->
-    <section id="speaking" class="page">
-        <div class="page-top">
-            <h2>Sharing Knowledge.<br><span class="cyan">Building Future Talent.</span></h2>
-            <div class="speaking-top-stats">
-                <div class="stat-speaking">
-                    <h4>20+</h4>
-                    <p>Speaking Engagements</p>
-                </div>
-                <div class="stat-speaking">
-                    <p><strong>Universities,<br>Panels & Conferences</strong></p>
-                </div>
-            </div>
+        <div class="speaking-card" data-type="pyp">
+          <span class="card-label">PYP Evaluator</span>
+          <div class="image-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+          </div>
+          <p class="card-date">2024</p>
+          <h3>University Project Evaluation</h3>
+          <p>Evaluating student XR projects and providing industry feedback.</p>
+          <a href="#">View Details →</a>
         </div>
 
-        <div class="filters-bar">
-            <button class="filter-btn active" data-filter="all">Sharing</button>
-            <button class="filter-btn" data-filter="fyi">FYI Evaluator</button>
-            <button class="filter-btn" data-filter="advisory">Industrial Advisory Panel</button>
-            <button class="filter-btn" data-filter="classes">Classes</button>
+        <div class="speaking-card" data-type="advisory">
+          <span class="card-label">Advisory Panel</span>
+          <div class="image-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+          </div>
+          <p class="card-date">2024</p>
+          <h3>SGU University – Industry Advisory Panel</h3>
+          <p>Advising on curriculum development and industry alignment.</p>
+          <a href="#">View Details →</a>
         </div>
 
-        <div class="speaking-layout">
-            <div class="speaking-grid-main">
-                <div class="speaking-card" data-category="all">
-                    <img src="assets/immersive-learning-talk.png" alt="Speaking">
-                    <div class="card-label">KEYNOTE</div>
-                    <p class="card-date">JAN 2024, UX SHARING</p>
-                    <h3>Immersive Learning with VR</h3>
-                    <p>Cognitive benefits of immersive environments</p>
-                    <a href="#">Watch Session →</a>
-                </div>
+        <div class="speaking-card" data-type="classes">
+          <span class="card-label">Classes</span>
+          <div class="image-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+          </div>
+          <p class="card-date">2024</p>
+          <h3>VR / XR Masterclass</h3>
+          <p>Hands-on workshop on VR/XR development tools and best practices.</p>
+          <a href="#">View Details →</a>
+        </div>
 
-                <div class="speaking-card" data-category="all">
-                    <img src="assets/final-year-presentation.png" alt="Speaking">
-                    <div class="card-label">WORKSHOP</div>
-                    <p class="card-date">MAR 2024, STUDENT SHOWCASE</p>
-                    <h3>Final Year Project Presentation</h3>
-                    <p>Students presenting innovative XR solutions</p>
-                    <a href="#">View Recording →</a>
-                </div>
+        <div class="speaking-card" data-type="classes">
+          <span class="card-label">Classes</span>
+          <div class="image-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+          </div>
+          <p class="card-date">2024</p>
+          <h3>Intro to Virtual Reality</h3>
+          <p>An introductory session on VR concepts and applications.</p>
+          <a href="#">View Details →</a>
+        </div>
+      </div>
 
-                <div class="speaking-card" data-category="all">
-                    <img src="assets/segi-university-panel.png" alt="Speaking">
-                    <div class="card-label">PANEL</div>
-                    <p class="card-date">FEB 2024, SEGi UNIVERSITY</p>
-                    <h3>University Panel Discussion</h3>
-                    <p>Industry leaders discussing future of XR</p>
-                    <a href="#">Read Summary →</a>
-                </div>
-
-                <div class="speaking-card" data-category="all">
-                    <img src="assets/vr-workshop.png" alt="Speaking">
-                    <div class="card-label">WORKSHOP</div>
-                    <p class="card-date">APR 2024, DEV TRAINING</p>
-                    <h3>VR Development Workshop</h3>
-                    <p>Hands-on training for emerging developers</p>
-                    <a href="#">Learn More →</a>
-                </div>
-
-                <div class="speaking-card" data-category="all">
-                    <img src="assets/speaking-stage-1.png" alt="Speaking">
-                    <div class="card-label">KEYNOTE</div>
-                    <p class="card-date">MAY 2024, XR SUMMIT</p>
-                    <h3>XR Innovation Conference</h3>
-                    <p>Latest trends and innovations in XR</p>
-                    <a href="#">Watch Keynote →</a>
-                </div>
-
-                <div class="speaking-card" data-category="all">
-                    <img src="assets/speaking-conference.png" alt="Speaking">
-                    <div class="card-label">CONFERENCE</div>
-                    <p class="card-date">JUNE 2024, TECH SUMMIT</p>
-                    <h3>Industry Thought Leadership</h3>
-                    <p>Sharing insights on immersive technology</p>
-                    <a href="#">Listen Now →</a>
-                </div>
+      <div class="contribution-box">
+        <h3>About My <span>Contribution</span></h3>
+        <div class="contribution-items">
+          <div class="contribution-item">
+            <div class="bullet">🎤</div>
+            <div>
+              <h4>Sharing practical XR knowledge</h4>
+              <p>Bridging the gap between academic learning and industry application.</p>
             </div>
-
-            <div class="contribution-box">
-                <h3>About My <span class="cyan">Contribution</span></h3>
-                <div class="contribution-items">
-                    <div class="contribution-item">
-                        <span class="bullet">🎤</span>
-                        <div>
-                            <h4>Speaking at Global Events</h4>
-                            <p>Sharing insights on XR innovation at international tech summits.</p>
-                        </div>
-                    </div>
-                    <div class="contribution-item">
-                        <span class="bullet">📊</span>
-                        <div>
-                            <h4>FYI Evaluator</h4>
-                            <p>Evaluating emerging XR technologies and providing strategic perspectives.</p>
-                        </div>
-                    </div>
-                    <div class="contribution-item">
-                        <span class="bullet">🏢</span>
-                        <div>
-                            <h4>Industrial Advisory Panel</h4>
-                            <p>Contributing to industry standards in immersive technology.</p>
-                        </div>
-                    </div>
-                    <div class="contribution-item">
-                        <span class="bullet">📚</span>
-                        <div>
-                            <h4>Educational Classes</h4>
-                            <p>Teaching next-generation developers about VR/XR development.</p>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div class="contribution-item">
+            <div class="bullet">📚</div>
+            <div>
+              <h4>Supporting student evaluation & growth</h4>
+              <p>Helping students refine their XR projects with real-world industry insights.</p>
             </div>
-        </div>
-
-        <section class="cta-speaking">
-            <h2>Let's Collaborate Through<br><span class="cyan">Knowledge & Innovation</span></h2>
-            <button class="btn-cyan" data-page="contact">Get in Touch →</button>
-        </section>
-    </section>
-
-    <!-- CONTACT PAGE -->
-    <section id="contact" class="page">
-        <h1>Let's Build Something<br><span class="cyan">Immersive</span> Together</h1>
-        <p class="contact-intro">I'm open to high-impact collaborations, technical consulting, and speaking invitations at international tech summits. Let's explore what we can create together.</p>
-
-        <div class="contact-layout">
-            <div class="contact-form-box">
-                <h3>Send Me a Message</h3>
-                <p>Fill out the form below and I'll get back to you as soon as possible.</p>
-                <form id="contactForm" class="contact-form">
-                    <div class="form-row">
-                        <input type="text" id="name" placeholder="Your Name" required>
-                        <input type="email" id="email" placeholder="Your Email" required>
-                    </div>
-                    <select id="subject" required>
-                        <option value="">Subject</option>
-                        <option value="collaboration">Collaboration</option>
-                        <option value="consulting">Consulting</option>
-                        <option value="speaking">Speaking</option>
-                        <option value="other">Other</option>
-                    </select>
-                    <textarea id="message" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="btn-cyan">Send Message →</button>
-                    <p id="formStatus" class="form-status"></p>
-                </form>
+          </div>
+          <div class="contribution-item">
+            <div class="bullet">👥</div>
+            <div>
+              <h4>Contributing industry perspective</h4>
+              <p>Bringing industry trends and best practices into academic settings.</p>
             </div>
-
-            <div class="contact-info-box">
-                <h3>Other Ways to Connect</h3>
-                <div class="contact-ways">
-                    <div class="contact-way">
-                        <span class="icon">✉️</span>
-                        <div>
-                            <h4>Email</h4>
-                            <p>hello@ismatxr.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-way">
-                        <span class="icon">🔗</span>
-                        <div>
-                            <h4>LinkedIn</h4>
-                            <p><a href="https://linkedin.com/in/ismatxr" target="_blank">linkedin.com/in/ismatxr</a></p>
-                        </div>
-                    </div>
-                    <div class="contact-way">
-                        <span class="icon">📸</span>
-                        <div>
-                            <h4>Instagram</h4>
-                            <p>@ismatxr</p>
-                        </div>
-                    </div>
-                    <div class="contact-way">
-                        <span class="icon">📍</span>
-                        <div>
-                            <h4>Location</h4>
-                            <p>Malaysia & International</p>
-                        </div>
-                    </div>
-                    <div class="contact-way">
-                        <span class="icon">⏱️</span>
-                        <div>
-                            <h4>Response Time</h4>
-                            <p>Within 24-48 hours</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cta-box">
-                    <h3>Have an XR Project in Mind?</h3>
-                    <p>Let's explore how immersive technology can transform your ideas into reality.</p>
-                    <button class="btn-cyan">Start a Project →</button>
-                </div>
+          </div>
+          <div class="contribution-item">
+            <div class="bullet">🎓</div>
+            <div>
+              <h4>Conducting immersive classes</h4>
+              <p>Delivering hands-on VR/AR workshops that inspire and educate.</p>
             </div>
+          </div>
         </div>
-    </section>
+        <button class="btn-primary" style="width: 100%; margin-top: 2rem; justify-content: center;" onclick="showPage('contact')">
+          Invite Me
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-left">
-            <h3>ISMAT XR</h3>
-            <p>© 2024 ISMAT XR. All rights reserved.</p>
-        </div>
-        <div class="footer-right">
-            <a href="#">LinkedIn</a>
-            <a href="#">Twitter</a>
-            <a href="#">Discord</a>
-            <a href="#">GitHub</a>
-        </div>
-    </footer>
+    <div class="cta-speaking">
+      <h2>Let's Collaborate Through Knowledge & Innovation</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 2rem;">Open to talks, classes, evaluations, and industry collaborations.</p>
+      <button class="btn-primary" onclick="showPage('contact')">
+        Get in Touch
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </button>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- Contact Page -->
+  <section id="contact" class="page">
+    <div class="grid-pattern" style="position: absolute; inset: 0; opacity: 0.5;"></div>
+    
+    <div style="position: absolute; top: 100px; right: 0; width: 600px; height: 400px; opacity: 0.3;">
+      <svg viewBox="0 0 600 400" class="envelope-glow" style="width: 100%; height: 100%;">
+        <defs>
+          <linearGradient id="envGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#7c3aed" />
+            <stop offset="50%" stop-color="#a78bfa" />
+            <stop offset="100%" stop-color="#3b82f6" />
+          </linearGradient>
+        </defs>
+        <rect x="100" y="80" width="400" height="260" rx="12" fill="none" stroke="url(#envGrad)" stroke-width="2" />
+        <path d="M100 80 L300 220 L500 80" fill="none" stroke="url(#envGrad)" stroke-width="2" />
+        <path d="M100 340 L250 200" fill="none" stroke="url(#envGrad)" stroke-width="1.5" opacity="0.5" />
+        <path d="M500 340 L350 200" fill="none" stroke="url(#envGrad)" stroke-width="1.5" opacity="0.5" />
+        <circle cx="300" cy="220" r="4" fill="#a78bfa" />
+        <circle cx="300" cy="220" r="8" fill="#a78bfa" opacity="0.3" />
+      </svg>
+    </div>
+
+    <div class="city-bg" style="height: 200px;"></div>
+
+    <div class="contact-header" style="position: relative; z-index: 1;">
+      <p>XR Developer • VR Consultant • Founder of Exovers</p>
+      <h1>
+        Let's Build Something<br />
+        <span class="gradient-text-purple">Immersive Together</span>
+      </h1>
+      <p class="contact-intro">
+        I'm always open to new opportunities, collaborations, speaking engagements, and innovative XR projects. Let's create impact through immersive experiences.
+      </p>
+      
+      <div class="contact-quick-links">
+        <a href="mailto:hello@ismatxr.com" class="contact-quick-link">
+          ✉️ Email Me
+        </a>
+        <a href="#" class="contact-quick-link">
+          📞 Book a Call
+        </a>
+        <a href="#" class="contact-quick-link">
+          💬 Let's Chat
+        </a>
+      </div>
+    </div>
+
+    <div class="contact-layout" style="position: relative; z-index: 1;">
+      <div class="contact-form-box">
+        <h3>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          Send Me a Message
+        </h3>
+        <p>Fill in the form below and I'll get back to you as soon as possible.</p>
+        
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+          </div>
+          <input type="text" placeholder="Subject" required />
+          <textarea rows="5" placeholder="Your Message" required></textarea>
+          <div class="form-status" id="formStatus"></div>
+          <button type="submit" class="btn-primary">
+            Send Message
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <div class="contact-info-box">
+        <h3>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+          Other Ways to Connect
+        </h3>
+        <p>Prefer to reach out another way? Here's how:</p>
+        
+        <div class="contact-ways">
+          <div class="contact-way">
+            <div class="icon">✉️</div>
+            <div>
+              <h4>Email</h4>
+              <p><a href="mailto:hello@ismatxr.com">hello@ismatxr.com</a></p>
+            </div>
+          </div>
+          <div class="contact-way">
+            <div class="icon">💼</div>
+            <div>
+              <h4>LinkedIn</h4>
+              <p>linkedin.com/in/ismatxr</p>
+            </div>
+          </div>
+          <div class="contact-way">
+            <div class="icon">📷</div>
+            <div>
+              <h4>Instagram</h4>
+              <p>@ismatxr</p>
+            </div>
+          </div>
+          <div class="contact-way">
+            <div class="icon">📍</div>
+            <div>
+              <h4>Location</h4>
+              <p>Malaysia · Available for international projects</p>
+            </div>
+          </div>
+          <div class="contact-way">
+            <div class="icon">⏰</div>
+            <div>
+              <h4>Response Time</h4>
+              <p>Usually replies within 24-48 hours</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-box" style="margin-top: 3rem; position: relative; z-index: 1;">
+      <h3>Have an XR Project in Mind?</h3>
+      <p>Let's discuss how we can bring your ideas to life with immersive technology.</p>
+      <button class="btn-primary" onclick="showPage('contact')">
+        Start a Project
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <h3><span>ISMAT</span> <span>XR</span></h3>
+        <p>© 2024 Ismat XR. All rights reserved.</p>
+      </div>
+      <div class="footer-right">
+        <a href="#">GitHub</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Instagram</a>
+        <a href="#">YouTube</a>
+        <span class="footer-email">hello@ismatxr.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
