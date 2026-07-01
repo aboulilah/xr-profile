@@ -368,6 +368,8 @@ body {
   font-size: 0.8rem;
   color: var(--text-muted);
 }
+
+
 /* Speaking Card Home */
 .speaking-card-home {
   background: var(--bg-card);
