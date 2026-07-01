@@ -32,7 +32,7 @@
   <section id="home" class="page active">
     <!-- Hero Section -->
     <div class="hero">
-      <div class="hero-bg"></div>
+      <div class="hero-bg-image"></div>
       <div class="grid-pattern"></div>
       
       <div class="hero-content">
@@ -104,64 +104,74 @@
       </div>
     </div>
 
-    <!-- Selected Projects -->
+    <!-- Projects & Speaking Section -->
     <div class="section">
-      <div class="section-header">
-        <h2>Selected Projects <span>Explore My Recent Work</span></h2>
-        <a href="#" class="view-all" onclick="showPage('projects'); return false;">View All Projects →</a>
-      </div>
-      
-      <div class="projects-grid-3">
-        <div class="project-card-small" onclick="showPage('projects')">
-          <div class="card-image">
-            <img src="assets/amazon-warehouse.png" alt="Amazon" />
+      <div class="projects-speaking-grid">
+        <div class="projects-left">
+          <div class="section-header">
+            <h2>Selected Projects <span>Explore My Recent Work</span></h2>
+            <a href="#" class="view-all" onclick="showPage('projects'); return false;">View All Projects →</a>
           </div>
-          <div class="card-info">
-            <h4>Amazon VR Tour</h4>
-            <p>Immersive warehouse tour</p>
+          
+          <div class="projects-grid-3">
+            <div class="project-card-small" onclick="showPage('projects')">
+              <div class="card-image">
+                <img src="assets/amazon-warehouse.png" alt="Amazon" />
+              </div>
+              <div class="card-info">
+                <h4>Amazon VR Tour</h4>
+                <p>Immersive warehouse tour</p>
+              </div>
+            </div>
+            
+            <div class="project-card-small" onclick="showPage('projects')">
+              <div class="card-image">
+                <img src="assets/denza-showroom.png" alt="Denza" />
+              </div>
+              <div class="card-info">
+                <h4>Denza Showroom Experience</h4>
+                <p>Interactive product visualization</p>
+              </div>
+            </div>
+            
+            <div class="project-card-small" onclick="showPage('projects')">
+              <div class="card-image">
+                <img src="assets/virtual-gallery.png" alt="Gallery" />
+              </div>
+              <div class="card-info">
+                <h4>Balai Seni Negara Virtual Gallery</h4>
+                <p>Cultural heritage experience</p>
+              </div>
+            </div>
           </div>
         </div>
-        
-        <div class="project-card-small" onclick="showPage('projects')">
-          <div class="card-image">
-            <img src="assets/denza-showroom.png" alt="Denza" />
-          </div>
-          <div class="card-info">
-            <h4>Denza Showroom Experience</h4>
-            <p>Interactive product visualization</p>
-          </div>
-        </div>
-        
-        <div class="project-card-small" onclick="showPage('projects')">
-          <div class="card-image">
-            <img src="assets/virtual-gallery.png" alt="Gallery" />
-          </div>
-          <div class="card-info">
-            <h4>Balai Seni Negara Virtual Gallery</h4>
-            <p>Cultural heritage experience</p>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Speaking & Insights -->
-    <div class="section speaking-home">
-      <div class="speaking-home-grid">
-        <div class="speaking-home-content">
-          <h3>Speaking & Insights</h3>
-          <p>Universities & Industry</p>
-          <div class="speaking-list">
-            <div class="speaking-item">
-              <span>APU Talk</span>
-              <small>XR in Education & Industry</small>
-            </div>
-            <div class="speaking-item">
-              <span>UMP Sharing Session</span>
-              <small>Immersive Learning with VR</small>
-            </div>
-            <div class="speaking-item">
-              <span>SEGi Industry Events</span>
-              <small>XR Trends & Innovation</small>
+        <div class="speaking-right">
+          <div class="speaking-card-home">
+            <h3>Speaking & Insights</h3>
+            <p>Universities & Industry</p>
+            <div class="speaking-list-home">
+              <div class="speaking-item-home">
+                <div class="speaking-icon">🎤</div>
+                <div>
+                  <span>APU Talk</span>
+                  <small>XR in Education & Industry</small>
+                </div>
+              </div>
+              <div class="speaking-item-home">
+                <div class="speaking-icon">🎓</div>
+                <div>
+                  <span>UMP Sharing Session</span>
+                  <small>Immersive Learning with VR</small>
+                </div>
+              </div>
+              <div class="speaking-item-home">
+                <div class="speaking-icon">💼</div>
+                <div>
+                  <span>SEGi Industry Events</span>
+                  <small>XR Trends & Innovation</small>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -198,7 +208,6 @@
       <div class="page-bg"></div>
       <div class="grid-pattern"></div>
       
-      <p>XR Developer • VR Consultant • Founder of Exovers</p>
       <h1>My <span class="gradient-text-purple">Projects</span></h1>
       <p class="page-desc">
         I build immersive VR/XR experiences that solve real problems — from training simulations and education to virtual tours and interactive brand activations.
@@ -241,7 +250,7 @@
           <p class="project-category">Interactive product visualization</p>
           <p>An immersive VR showroom that allows users to explore and customize the DENZA vehicle lineup.</p>
           <div class="project-footer">
-            <span class="tag tag-blue">Product Experience</span>
+            <span class="tag tag-purple">Product Experience</span>
             <a href="#">View Details →</a>
           </div>
         </div>
@@ -273,7 +282,7 @@
           <p class="project-category">Training simulation</p>
           <p>A realistic VR training simulation designed to prepare firefighters for real-life emergency scenarios.</p>
           <div class="project-footer">
-            <span class="tag tag-cyan">Training & Simulation</span>
+            <span class="tag tag-purple">Training & Simulation</span>
             <a href="#">View Details →</a>
           </div>
         </div>
@@ -289,7 +298,7 @@
           <p class="project-category">Educational experience</p>
           <p>An immersive VR learning experience developed for educational purposes and student engagement.</p>
           <div class="project-footer">
-            <span class="tag tag-blue">Education</span>
+            <span class="tag tag-purple">Education</span>
             <a href="#">View Details →</a>
           </div>
         </div>
@@ -315,7 +324,6 @@
       <div class="page-bg"></div>
       <div class="grid-pattern"></div>
       
-      <p>XR Developer • VR Consultant • Founder of Exovers</p>
       <h1>Speaking & Insights</h1>
       <h2 class="gradient-text-purple">Sharing Knowledge. Building Future Talent.</h2>
       <p class="page-desc">
@@ -343,7 +351,7 @@
     </div>
 
     <div class="speaking-content">
-      <div class="speaking-cards-grid" id="speakingGrid">
+      <div class="speaking-cards-grid-3" id="speakingGrid">
         <div class="speaking-card-full" data-type="sharing">
           <span class="card-badge">Sharing</span>
           <div class="card-img">
@@ -476,7 +484,6 @@
       <div class="city-bg"></div>
 
       <div class="contact-header-section">
-        <p>XR Developer • VR Consultant • Founder of Exovers</p>
         <h1>
           Let's Build Something<br />
           <span class="gradient-text-purple">Immersive Together</span>
@@ -487,13 +494,16 @@
         
         <div class="quick-links">
           <a href="mailto:hello@ismatxr.com" class="quick-link">
-            ✉️ Email Me
+            <span class="link-icon">✉️</span>
+            Email Me
           </a>
           <a href="#" class="quick-link">
-            📞 Book a Call
+            <span class="link-icon">📞</span>
+            Book a Call
           </a>
           <a href="#" class="quick-link">
-            💬 Let's Chat
+            <span class="link-icon">💬</span>
+            Let's Chat
           </a>
         </div>
       </div>
